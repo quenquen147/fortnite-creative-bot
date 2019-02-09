@@ -1,15 +1,15 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
+const client = new Discord.Client()
 const YoutubeStream = require('youtube-audio-stream')
 const Play = require('./commands/play')
 const Leave = require('./commands/leave')
 
-bot.on('ready', function() {
+client.on('ready', function() {
     bot.user.setActivity('Fortnite').catch(console.error)
 })
 
 // Create an event listener for new guild members
-bot.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find(ch => ch.name === '💬cнαт-ɢeɴerαl');
   // Do nothing if the channel wasn't found on this server
@@ -19,22 +19,22 @@ bot.on('guildMemberAdd', member => {
 });
 
 
-bot.on('message', function (message) {
+client.on('message', function (message) {
     if (message.content === '!test') {
         message.reply('Ça fonctionne bien !')
     }
 })
 
-bot.on('message', function (message) {
+client.on('message', function (message) {
   Play.parse(message)
 })
 
-bot.on('message', function (message){
+client.on('message', function (message){
   Leave.parse(message)
 })
 
 
-bot.on('message', message => {
+client.on('message', message => {
   // If the message is "what is my avatar"
   if (message.content === 'Mon avatar') {
     // Send the user's avatar URL
@@ -43,7 +43,7 @@ bot.on('message', message => {
 });
 
 
-bot.on('message', function (message) {
+client.on('message', function (message) {
   if(message.content === '!avancement') {
     message.channel.send({embed: {
       color: 8632984,
@@ -85,7 +85,7 @@ bot.on('message', function (message) {
   }
 })
 
-bot.on('message', function (message) {
+client.on('message', function (message) {
   if(message.content === '!regles') {
        message.channel.send({embed: {
       color: 8625894,
@@ -103,7 +103,7 @@ bot.on('message', function (message) {
  
 })
 
-bot.on('message', function (message) {
+client.on('message', function (message) {
     if(message.content === '!commandes') {
          message.channel.send({embed: {
         color: 3447003,
@@ -141,4 +141,4 @@ bot.on('message', function (message) {
    
 })
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
