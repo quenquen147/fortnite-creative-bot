@@ -141,4 +141,4 @@ bot.on('message', function (message) {
    
 })
 
-bot.login('NTM5ODc4NjI1NTU4NzkwMTg1.DzIxiw.-1R54HLXDDRMHMES0WAhQjMBQYA');
+bot.login(process.env.BOT_TOKEN);
