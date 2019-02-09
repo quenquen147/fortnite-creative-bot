@@ -2,7 +2,7 @@
   "name": "tchoowbot",
   "version": "1.0.0",
   "description": "Bot discord du serveur Tchoow mini games",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },
