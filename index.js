@@ -58,25 +58,13 @@ bot.on('message', function (message) {
           value: "Liste toutes les commandes du bot "
         },
         {
-          name: "!Start - ❌",
+          name: "!Start - ✅",
           value: "Lance la partie"
         },
         {
-          name: "!Stop - ❌",
+          name: "!Stop - ✅",
           value: "Stop la partie"
-        },
-        {
-          name: "!Time [min:sec] - ❌",
-          value: "Modifie le laps de temps en minutes"
-        },
-        {
-          name:"!Avatar (Admin) [URL] -❌",
-          value: "Permet de modifier le logo du bot"
-        },
-        {
-          name: "!NameBot (Admin) [nom]- ❌",
-          value: "Change le nom du bot"
-        },
+        }
       ],
       footer: {
         text: "© Quentin"
@@ -111,24 +99,16 @@ bot.on('message', function (message) {
         description: "D\'autres commandes et améliorations sont prévues ultérieurement",
         fields: [
             {
-                name: "!Regles",
-                value: "Énonce les règles du mini-jeu"
+              name: "!Regles",
+              value: "Énonce les règles du mini-jeu"
             },
             {
             name: "!Start",
             value: "Lance la partie"
           },
           {
-            name: "!Time [min:sec]",
-            value: "Modifie le laps de temps en minutes"
-          },
-          {
-            name: "!Avatar [Url]",
-            value: "Permet de modifier le logo du bot"
-          },
-          {
-            name: "!NameBot [nom]",
-            value: "Change le nom du bot"
+            name: "!Stop",
+            value: "Stop la partie"
           }
         ],
         timestamp: new Date(),
