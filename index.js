@@ -20,14 +20,8 @@ bot.on('guildMemberAdd', member => {
 
 
 bot.on('message', function (message) {
-  let modRole = message.guild.roles.find("name", "Mods");
-  if (message.member.roles.has(modRole.id)) {
-    if (message.content === '!test') {       
-         message.reply('Ça fonctionne bien !')
-      } else {
-        message.channel.reply('Vous n\'avez pas les permissions suffisantes');
-      }
-       
+    if (message.content === '!test') {
+        message.reply('Ça fonctionne bien !')
     }
 })
 
