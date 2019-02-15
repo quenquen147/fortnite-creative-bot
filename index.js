@@ -99,15 +99,15 @@ bot.on('message', function (message) {
         description: "D\'autres commandes et améliorations sont prévues ultérieurement",
         fields: [
             {
-              name: "!Regles",
+              name: "!regles",
               value: "Énonce les règles du mini-jeu"
             },
             {
-            name: "!Start",
+            name: "!start",
             value: "Lance la partie"
           },
           {
-            name: "!Stop",
+            name: "!stop",
             value: "Stop la partie"
           }
         ],
