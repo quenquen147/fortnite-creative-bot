@@ -26,11 +26,22 @@ bot.on('message', function (message) {
 })
 
 bot.on('message', function (message) {
-  Play.parse(message)
+  let modRole = message.guild.roles.find("name", "Mods");
+  if (message.member.roles.has(modRole.id)) {
+    Play.parse(message)
+  } else {
+    message.channel.reply("Vous n'avez pas les permissions nécessaires pour utiliser cette commande :(");
+  }
+  
 })
 
 bot.on('message', function (message){
-  Leave.parse(message)
+  let modRole = message.guild.roles.find("name", "Mods");
+  if (message.member.roles.has(modRole.id)) {
+    Leave.parse(message)
+  } else {
+    message.channel.reply("Vous n'avez pas les permissions nécessaires pour utiliser cette commande :(");
+  }
 })
 
 
