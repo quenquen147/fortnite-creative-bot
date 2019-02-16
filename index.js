@@ -26,6 +26,7 @@ bot.on('message', function (message) {
 })
 
 bot.on('message', function (message) {
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n\'avez pas les permissions d\'utiliser cette commande !");
   Play.parse(message)
 })
 
