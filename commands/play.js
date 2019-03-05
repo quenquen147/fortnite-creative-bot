@@ -12,6 +12,7 @@ module.exports = class Play extends Command {
        .first()
        voiceChannel
        .join()
+       .muted()
        
        .then(function (connection) {
             connection.playFile('./mp3/SonsZone.mp3');
