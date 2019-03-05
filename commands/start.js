@@ -7,6 +7,7 @@ module.exports.run = async (client, message, args) => {
   .first()
   voiceChannel
   .join()
+  .speakable(false)
   
   .then(function (connection) {
        connection.playFile('./mp3/SonsZone.mp3');
