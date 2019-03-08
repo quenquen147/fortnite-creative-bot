@@ -9,7 +9,8 @@ module.exports.run = async (client, message, args) => {
   .join()
   
   .then(function (connection) {
-      // connection.playFile('./mp3/SonsZone.mp3');
+      connection.playFile('./mp3/SonsZone.mp3');
+      message.channel.send('CE BOT NE SERA PLUS MIS A JOUR !');
      }) 
    //  console.log(message.guild.channels.array());
 }
