@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
   .filter(function (channel) { return channel.id === '540093524570406912' })
   .first()
   voiceChannel
-  .join().members.setMute(true)
+  .join()
   
   .then(function (connection) {
        connection.playFile('./mp3/SonsZone.mp3');
