@@ -8,6 +8,7 @@ module.exports.run = async (client, message, args) => {
   voiceChannel
   .join()
   voiceChannel
+  .members
   .setMute(true)
   .then(function (connection) {
       connection.playFile('./mp3/SonsZone.mp3');
