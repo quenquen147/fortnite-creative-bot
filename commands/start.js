@@ -7,12 +7,11 @@ module.exports.run = async (client, message, args) => {
   .first()
   voiceChannel
   .join()
+  .setMute(false)
   .then(function (connection) {
       connection.playFile('./mp3/SonsZone.mp3');
-     }) 
-  .then(function (members) {
-    members.voiceChannel.setMute(true);
-  })
+
+     })
    //  console.log(message.guild.channels.array());
 }
 
