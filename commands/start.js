@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
   
   .then(function (connection) {
       connection.playFile('./mp3/SonsZone.mp3');
-      voiceChannel.members.setDeaf(true);
+      voiceChannel.members.muted(true);
      }) 
    //  console.log(message.guild.channels.array());
 }
