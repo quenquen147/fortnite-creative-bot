@@ -9,6 +9,8 @@ module.exports.run = async (client, message, args) => {
   .join()
   .then(function (connection) {
       connection.playFile('./mp3/SonsZone.mp3');
+     }) .then (function(members) {
+       members.setMute(true);
      })
    //  console.log(message.guild.channels.array());
 }
