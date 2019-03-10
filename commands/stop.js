@@ -7,6 +7,10 @@ module.exports.run = async (client, message, args) => {
     .first()
     voiceChannel
     .leave()
+    let channel = message.member.voiceChannel;
+    for (let member of channel.members) {
+        member[1].setMute(false)
+    }
 }
 
 module.exports.help = {
