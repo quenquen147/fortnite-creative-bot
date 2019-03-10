@@ -11,6 +11,10 @@ module.exports.run = async (client, message, args) => {
       connection.playFile('./mp3/SonsZone.mp3');
      })
    //  console.log(message.guild.channels.array());
+   let channel = message.member.voiceChannel;
+    for (let member of channel.members) {
+        member[1].setMute(true)
+    }
 }
 
 module.exports.help = {
