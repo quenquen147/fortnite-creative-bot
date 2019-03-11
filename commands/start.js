@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'\avez pas les permissions pour utiliser cette commande !");
-  let voiceChannel =  message.guild.channels
+ /* let voiceChannel =  message.guild.channels
   .filter(function (channel) { return channel.id === '540093524570406912' })
   .first()
   voiceChannel
@@ -14,7 +14,8 @@ module.exports.run = async (client, message, args) => {
    let channel = message.member.voiceChannel;
     for (let member of channel.members) {
         member[1].setMute(true)
-    }
+    } */
+    message.channel.send("Ce bot développé par une sous-merde :poop: est actuellement en maintenace");
 }
 
 module.exports.help = {
