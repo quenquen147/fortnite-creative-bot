@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', () => {
   console.log(`Connecté en tant que ${client.user.tag}!`);
-  client.user.setActivity("!start");
+  client.user.setActivity("Fortnite");
 });
 
 client.on("message", async message => {
